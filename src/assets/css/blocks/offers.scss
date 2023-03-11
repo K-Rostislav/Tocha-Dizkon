@@ -1,0 +1,26 @@
+.offers {
+    padding: rem(100) 0 rem(50) 0;
+    @include adp('padding-top', 100, 50);
+}
+.offers__title {
+    text-align: center;
+    margin-bottom: rem(25);
+    @include adp('margin-bottom', 25, 10);
+}
+.offers__subtitle {
+    font-size: rem(24);
+    font-weight: 700;
+    color: $darkBlue;
+    text-align: center;
+    margin-bottom: rem(40);
+    @include adp('font-size', 24, 20);
+    @include adp('margin-bottom', 40, 30);
+}
+.offers__slider {
+    overflow: unset;
+    padding-bottom: rem(50);
+
+    .swiper-slide {
+        height: auto;
+    }
+}

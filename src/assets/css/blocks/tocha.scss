@@ -1,0 +1,240 @@
+.tocha {
+    background-color: $whiteDark;
+    padding: rem(70) 0;
+    @include adp('padding-top', 70, 40);
+    @include adp('padding-bottom', 70, 20);
+    @media (max-width: em(768)) {
+        background: none;
+    }
+}
+.tocha__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(75);
+    @media (max-width: em(767)) {
+        grid-template-columns: 1fr;
+        row-gap: rem(40);
+    }
+}
+.tocha__inner {
+    padding-top: rem(10);
+}
+.tocha__title {
+    margin-bottom: rem(70);
+    @include adp('margin-bottom', 70, 40);
+}
+.tocha__advantages {
+    display: flex;
+    flex-direction: column;
+    gap: rem(50) rem(20);
+    @include adp('row-gap', 50, 15);
+}
+.advantages-item {
+    display: flex;
+    gap: rem(25);
+    @include adp('gap', 25, 15);
+}
+.advantages-item__img {
+    max-width: rem(68);
+    width: 100%;
+    @include adp('max-width', 68, 38);
+
+    img {
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+.advantages-item__description {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+}
+.advantages-item__title {
+    font-size: rem(24);
+    font-weight: 600;
+    color: $darkBlue;
+    @include adp('font-size', 24, 20);
+}
+.advantages-item__text {
+    font-size: rem(16);
+    color: $darkBlue;
+    line-height: lh(26, 16);
+}
+.tocha__img {
+    width: 100%;
+
+    img {
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.tocha__svg {
+    padding: 0 rem(40);
+    @include adp('padding-left', 40, 0);
+    @include adp('padding-right', 40, 0);
+
+    svg {
+        max-width: 100%;
+        width: 100%;
+    }
+    &-message-1,
+    &-message-2,
+    &-message-3,
+    &-message-4,
+    &-message-5,
+    &-message-6,
+    &-message-7,
+    &-message-8,
+    &-message-9 {
+        opacity: 0;
+    }
+
+    &_animate {
+        .tocha__svg-message-1 {
+            transform: translateY(5%);
+            opacity: 0;
+            animation: meesage-1-fade-up .3s .8s forwards;
+        
+            @keyframes meesage-1-fade-up {
+                0% {
+                    transform: translateY(5%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+        .tocha__svg-message-2 {
+            transform: translateY(5%);
+            opacity: 0;
+            animation: meesage-2-fade-up .3s 2.4s forwards;
+        
+            @keyframes meesage-2-fade-up {
+                0% {
+                    transform: translateY(5%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+        .tocha__svg-message-3 {
+            transform: translateY(5%);
+            opacity: 0;
+            animation: meesage-3-fade-up .3s 3.2s forwards;
+        
+            @keyframes meesage-3-fade-up {
+                0% {
+                    transform: translateY(5%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+        .tocha__svg-message-4 {
+            transform: translateY(5%);
+            opacity: 0;
+            animation: meesage-4-fade-up .3s 4.4s forwards;
+        
+            @keyframes meesage-4-fade-up {
+                0% {
+                    transform: translateY(5%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+        .tocha__svg-message-5 {
+            transform: translateY(5%);
+            opacity: 0;
+            animation: meesage-5-fade-up .3s 5.8s forwards;
+        
+            @keyframes meesage-5-fade-up {
+                0% {
+                    transform: translateY(5%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+        .tocha__svg-message-6 {
+            transform: translateY(5%);
+            opacity: 0;
+            animation: meesage-6-fade-up .3s 6.5s forwards;
+        
+            @keyframes meesage-6-fade-up {
+                0% {
+                    transform: translateY(5%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+        .tocha__svg-message-7 {
+            transform: translateY(5%);
+            opacity: 0;
+            animation: meesage-7-fade-up .3s 7.2s forwards;
+        
+            @keyframes meesage-7-fade-up {
+                0% {
+                    transform: translateY(5%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+        .tocha__svg-message-8 {
+            transform: translateY(5%);
+            opacity: 0;
+            animation: meesage-8-fade-up .3s 8.7s forwards;
+        
+            @keyframes meesage-8-fade-up {
+                0% {
+                    transform: translateY(5%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+        .tocha__svg-message-9 {
+            transform: translateY(5%);
+            opacity: 0;
+            animation: meesage-9-fade-up .3s 9.2s forwards;
+        
+            @keyframes meesage-9-fade-up {
+                0% {
+                    transform: translateY(5%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,45 @@
+@import "vendor/_vars";
+@import "vendor/reset";
+@import "vendor/fonts";
+@import "vendor/options";
+@import "vendor/mixins";
+
+.body {
+    font-size: rem(14);
+    font-family: 'Gilroy';
+    font-weight: 400;
+}
+
+.page {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a,
+button,
+input {
+    font-family: 'Gilroy';
+}
+
+/* Common styles */
+@import "vendor/common-styles";
+
+/* Blocks */
+@import "blocks/header";
+@import "blocks/intro";
+@import "blocks/tocha";
+@import "blocks/offers";
+@import "blocks/connection";
+@import "blocks/comments";
+@import "blocks/email";
+@import "blocks/footer";

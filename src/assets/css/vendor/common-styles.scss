@@ -1,0 +1,354 @@
+.container {
+    max-width: rem($container);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 rem($padding);
+
+    &_connection {
+        @media (max-width: em(480)) {
+            padding: 0;
+        }
+    }
+}
+.main-title {
+    font-size: rem(50);
+    @include adp('font-size', 50, 32);
+
+    span {
+        color: $violet;
+    }
+}
+.minor-title {
+    font-size: rem(46);
+    @include adp('font-size', 46, 32);
+
+    span {
+        color: $violet;
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        max-width: rem(55);
+        @include adp('max-width', 55, 40);
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    &__name {
+        color: $darkBlue;
+        font-size: rem(28);
+        font-weight: 700;
+        @include adp('font-size', 28, 20);
+    }
+}
+.violet-button,
+.pink-button {
+    font-size: rem(16);
+    font-weight: 700;
+    padding: rem(12) rem(20);
+    border: 0;
+    text-decoration: none;
+    border-radius: rem(6);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    .hover {
+        position: absolute;
+        width: rem(10);
+        height: rem(10);
+        border-radius: 50%;
+        animation: hover-scale 1s forwards;
+        pointer-events: none;
+
+        @keyframes hover-scale {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(72);
+            }
+        }
+    }
+    .active {
+        position: absolute;
+        width: rem(10);
+        height: rem(10);
+        border-radius: 50%;
+        animation: active-scale .3s forwards linear;
+        pointer-events: none;
+
+        @keyframes active-scale {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(10);
+                opacity: 0;
+            }
+        }
+    }
+    &__text {
+        position: relative;
+        z-index: 1;
+        pointer-events: none;
+    }
+}
+.violet-button {
+    color: $white;
+    background-color: $violet;
+
+    .hover {
+        background-color: $blue;
+    }
+    .active {
+        background-color: $lightBlue;
+    }
+}
+.pink-button {
+    color: $violet;
+    background-color: $pink;
+
+    .hover {
+        background-color: $purple;
+    }
+    .active {
+        background-color: $pink;
+    }
+}
+.burger-btn {
+    width: rem(42.5);
+    height: rem(22);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+    display: none;
+    @media (max-width: em(768)) {
+        display: flex;
+    }
+
+    &__line {
+        width: 100%;
+        height: rem(3);
+        display: block;
+        transition: transform .2s;
+    }
+    .burger-btn__line {
+        border-radius: rem(2);
+
+        &:nth-of-type(1) {
+            background-color: $violet;
+        }
+
+        &:nth-of-type(2) {
+            background-color: $blue;
+        }
+
+        &:nth-of-type(3) {
+            background-color: $lightBlue;
+        }
+    }
+    &_active {
+        .burger-btn__line {
+            &:nth-of-type(1) {
+                transform: rotate(45deg);
+                position: absolute;
+                top: 50%;
+            }
+
+            &:nth-of-type(2) {
+                transform: translateX(200%);
+                position: absolute;
+                top: 50%;
+            }
+
+            &:nth-of-type(3) {
+                transform: rotate(-45deg);
+                position: absolute;
+                top: 50%;
+            }
+        }
+    }
+}
+.burger-background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity .2s;
+    pointer-events: none;
+    
+    &_active {
+        opacity: 1;
+        pointer-events: visible;
+    }
+}
+.burger {
+    width: rem(300);
+    height: 100vh;
+    background: $white;
+    position: fixed;
+    z-index: 101;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform .2s;
+    @media (max-width: em(360)) {
+        width: 100%;
+    }
+
+    &_active {
+        transform: translateX(0);
+    }
+    &__close-block {
+        padding: rem(16);
+        display: flex;
+        justify-content: end;
+    }
+    &__close {
+        width: rem(40);
+        height: rem(40);
+    }
+}
+.close {
+    position: relative;
+    cursor: pointer;
+
+    &__line {
+        width: 100%;
+        height: rem(3);
+        background-color: $violet;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:nth-of-type(1) {
+            transform: rotate(45deg);
+        }
+        &:nth-of-type(2) {
+            transform: rotate(-45deg);
+        }
+    }
+}
+.offers-item {
+    box-shadow: 0 10px 20px 0 rgb(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        padding: rem(40) rem(30) rem(50);
+        height: 100%;
+    }
+    &__name {
+        padding: rem(15) 0;
+        background-color: $violetOpacity;
+        color: $violet;
+        font-size: rem(24);
+        font-weight: 800;
+        text-align: center;
+    }
+    &__description {
+        color: $darkBlue;
+        font-size: rem(28);
+        line-height: lh(40, 28);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: rem(40);
+    }
+    &__price {
+        color: $darkBlue;
+        font-size: rem(20);
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: rem(50);
+    }
+    &__button {
+        display: block;
+        margin-top: auto;
+    }
+}
+.swiper-pagination {
+    .swiper-pagination-bullet {
+        background-color: transparent;
+        width: rem(10);
+        height: rem(10);
+        border: 2px solid $violet;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $violet;
+        transition: .2s;
+    }
+}
+.input-block {
+    position: relative;
+
+    &__input {
+        background-color: $lightViolet;
+        font-size: rem(16);
+        padding: rem(15) rem(20);
+        color: $darkBlue;
+        border: 0;
+        border-radius: rem(4) 0 0 rem(4);
+        outline: 0;
+        width: 100%;
+        @media (max-width: em(480)) {
+            border-radius: rem(4);
+        }
+    
+        &::placeholder {
+            color: $darkGray;
+        }
+        &:focus {
+            outline: 2px solid $violet;
+            outline-offset: -2px;
+        }
+    }
+    &__error {
+        gap: rem(10);
+        position: absolute;
+        left: 0;
+        bottom: rem(-25);
+        display: none;
+        @media (max-width: em(480)) {
+            position: unset;
+            left: unset;
+            bottom: unset;
+            margin-top: rem(5);
+        }
+    }
+    &__error-text {
+        color: rgb(199, 199, 199);
+        white-space: nowrap;
+        font-weight: 500;
+        @media (max-width: em(480)) {
+            white-space: unset;
+        }
+    }
+    &_error {
+        .input-block__input {
+            background-color: #fae3e3;
+            outline: 2px solid $red;
+            outline-offset: -2px;
+        }
+        .input-block__error {
+            display: flex;
+        }
+    }
+}
