@@ -8,6 +8,22 @@
     font-size: rem(14);
     font-family: 'Gilroy';
     font-weight: 400;
+
+    &_no-scroll {
+        overflow: hidden;
+    }
+
+    &::-webkit-scrollbar {
+        width: rem(12);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $violet;
+        border-radius: rem(6);
+    }
+    &::-webkit-scrollbar-track {
+        background: rgb(24, 225, 247, 0.2);
+        border-radius: rem(6);
+    }
 }
 
 .page {
@@ -16,8 +32,6 @@
     flex-direction: column;
     min-height: 100vh;
 }
-
-.main {}
 
 *,
 *:before,

@@ -49,21 +49,25 @@ const burgerBtn = document.querySelector('.burger-btn')
 const burgerBg = document.querySelector('.burger-background')
 const burger = document.querySelector('.burger')
 const close = document.querySelector('.close')
+const body = document.body
 
 burgerBtn.addEventListener('click', () => {
     burgerBtn.classList.add('burger-btn_active')
     burger.classList.add('burger_active')
     burgerBg.classList.add('burger-background_active')
+    body.classList.add('body_no-scroll')
 })
 burgerBg.addEventListener('click', () => {
     burgerBtn.classList.remove('burger-btn_active')
     burger.classList.remove('burger_active')
     burgerBg.classList.remove('burger-background_active')
+    body.classList.remove('body_no-scroll')
 })
 close.addEventListener('click', () => {
     burgerBtn.classList.remove('burger-btn_active')
     burger.classList.remove('burger_active')
     burgerBg.classList.remove('burger-background_active')
+    body.classList.remove('body_no-scroll')
 })
 // tocha-animation ===================================================
 const tocha = document.querySelector('.tocha')

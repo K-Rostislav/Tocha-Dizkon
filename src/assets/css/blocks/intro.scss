@@ -5,7 +5,8 @@
 }
 .intro__content {
     display: grid;
-    grid-template-columns: 42% 58%;
+    grid-template-columns: 1fr 1.35fr;
+    column-gap: rem(30);
     @media (max-width: em(768)) {
         grid-template-columns: 1fr;
         row-gap: rem(50);
@@ -28,11 +29,13 @@
 }
 .intro__img {
     width: 100%;
-    
+    max-height: rem(550);
+
     img {
         max-width: 100%;
         width: 100%;
-        object-fit: cover;
+        max-height: 100%;
+        object-fit: contain;
     }
 }
 .intro__svg {
