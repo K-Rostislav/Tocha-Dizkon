@@ -25,6 +25,9 @@
     span {
         color: $violet;
     }
+    &_padding {
+        padding: 0 rem(23);
+    }
 }
 .logo {
     display: flex;
