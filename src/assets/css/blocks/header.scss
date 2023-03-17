@@ -13,6 +13,11 @@
     align-items: center;
     gap: rem(12);
 }
+.header__nav-block {
+    @media (max-width: em(768)) {
+        display: none;
+    }
+}
 .header__nav-list {
     display: flex;
     justify-content: space-between;
